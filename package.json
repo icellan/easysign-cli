@@ -14,9 +14,9 @@
     "build": "rimraf dist/ && babel src/ --presets minify --out-dir dist/",
     "lint": "eslint ./src",
     "lintfix": "eslint ./src --fix",
-    "testquiet": "./node_modules/.bin/jest --detectOpenHandles --forceExit --silent",
-    "testonly": "./node_modules/.bin/jest --collectCoverage --detectOpenHandles --forceExit",
-    "testwatch": "./node_modules/.bin/jest --watchAll --collectCoverage --detectOpenHandles",
+    "testquiet": "./node_modules/.bin/jest --detectOpenHandles --forceExit --silent --passWithNoTests",
+    "testonly": "./node_modules/.bin/jest --collectCoverage --detectOpenHandles --forceExit --passWithNoTests",
+    "testwatch": "./node_modules/.bin/jest --watchAll --collectCoverage --detectOpenHandles --passWithNoTests",
     "test": "npm run lint && npm run testquiet",
     "test-watch": "npm run testwatch",
     "check": "./node_modules/.bin/npm-check -u",
@@ -32,6 +32,7 @@
     "easysign"
   ],
   "dependencies": {
+    "@babel/runtime": "^7.13.17",
     "node-fetch": "^2.6.1",
     "yargs": "^16.2.0"
   },
