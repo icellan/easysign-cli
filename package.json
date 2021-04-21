@@ -1,6 +1,6 @@
 {
   "name": "easysign-cli",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "EasySign CLI helper",
   "author": "icellan (https://github.com/icellan)",
   "license": "Open BSV License",
